@@ -8,9 +8,9 @@ function Login() {
     <>
       <div className="">
         <HeaderLogin />
-        <div className="flex flex-row px-10  py-0 max-md:flex-col">
+        <div className="flex flex-row px-10  py-0 max-md:flex-col justify-center">
           <LoginForm />
-          <InfoContainer />
+          {/* <InfoContainer /> */}
         </div>
       </div>
     </>
