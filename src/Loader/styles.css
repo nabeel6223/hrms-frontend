@@ -1,0 +1,76 @@
+/* Base shimmer */
+.shimmer {
+  border-radius: 6px;
+  background: linear-gradient(
+    110deg,
+    #eeeeee 25%,
+    #dddddd 37%,
+    #eeeeee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Card container */
+.card-shimmer {
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* Lines */
+.line {
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+.line.title {
+  height: 22px;
+  width: 60%;
+}
+
+.line.small {
+  width: 40%;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* Fade + pulse animation */
+.animate-fade {
+  animation: fadePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes fadePulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loaderImg {
+    width: 3%;
+}
