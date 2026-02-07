@@ -28,7 +28,7 @@ export default function EmployeeAttendancePage() {
       setLoading(true);
 
       const resp = await axios.get(
-        `${basePath}/attendance/${params.id}?year=${year}&month=${month + 1}`,
+        `/api/attendance/${params.id}?year=${year}&month=${month + 1}`,
       );
       console.log(resp);
 
@@ -75,10 +75,7 @@ export default function EmployeeAttendancePage() {
       };
       // setLoading(true);
 
-      const resp = await axios.post(
-        `${basePath}/attendance/${params.id}`,
-        data,
-      );
+      const resp = await axios.post(`/api/attendance/${params.id}`, data);
       if (resp.status == 200) {
         showSuccess("Attendance edited successfully!");
         fetchAttendance();

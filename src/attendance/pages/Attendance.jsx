@@ -30,7 +30,7 @@ export default function AttendancePage() {
         setLoading(true);
 
         const resp = await axios.get(
-          `${basePath}/attendance/summary?start_date=${dateRange.from}&end_date=${dateRange.to}`,
+          `/api/attendance/summary?start_date=${dateRange.from}&end_date=${dateRange.to}`,
         );
         console.log(resp);
         if (resp.data.error == false) setData(resp.data.data);

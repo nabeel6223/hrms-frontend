@@ -22,7 +22,7 @@ function Employee() {
     try {
       setLoading(true);
 
-      const resp = await axios.get(`${basePath}/employees`);
+      const resp = await axios.get(`/api/employees`);
       if (resp.data.error == false) {
         setData(resp.data.data);
       } else setError(resp.data.message ?? "Failed to load Data");
@@ -43,7 +43,7 @@ function Employee() {
   const handleAddEmployee = async (data) => {
     try {
       // console.log(data);
-      const resp = await axios.post(`${basePath}/employee`, data, {
+      const resp = await axios.post(`/api/employee`, data, {
         validateStatus: (status) => {
           return true; // Always resolve, even for failed status codes
         },
@@ -71,7 +71,7 @@ function Employee() {
     try {
       setProcessing(true);
       console.log(selectedId);
-      const resp = await axios.delete(`${basePath}/employee/${selectedId}`, {
+      const resp = await axios.delete(`/api/employee/${selectedId}`, {
         validateStatus: (status) => {
           return true; // Always resolve, even for failed status codes
         },
