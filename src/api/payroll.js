@@ -10,7 +10,7 @@ const headers =  {
 
 export const fetchPayrollTimeline = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/payroll/timeline`, {
+const res = await axios.get(`/api/payroll/timeline`, {
   headers: headers
   });
 if(!res.data.error)
@@ -21,7 +21,7 @@ else
 
 export const fetchExpenseSummary = async () => {
 // await delay(4000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/expense`, {
+const res = await axios.get(`/api/expense`, {
   headers: headers
   });
 if(!res.data.error)

@@ -9,7 +9,7 @@ const headers =  {
 
 export const fetchHolidays = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/holidays/upcoming`, {
+const res = await axios.get(`/api/holidays/upcoming`, {
   headers: headers
   });
 if(!res.data.error)

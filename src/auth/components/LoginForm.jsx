@@ -24,7 +24,7 @@ function LoginForm() {
     try {
       if (loading) return;
       setLoading(true);
-      const resp = await axios.post(`${baseUrl}/login`, data, {
+      const resp = await axios.post(`/api/login`, data, {
         headers: headers,
       });
       if (resp.data.error) {

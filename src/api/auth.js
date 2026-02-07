@@ -9,7 +9,7 @@
 
 // export const login = async () => {
 // await delay(2000); // Simulate network delay
-// const res = await axios.get(`${baseUrl}/employees/summary`, {
+// const res = await axios.get(`/api/employees/summary`, {
 //   headers: headers
 //   });
 // if(!res.data.error)

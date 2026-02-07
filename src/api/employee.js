@@ -9,7 +9,7 @@ const headers =  {
 
 export const fetchEmployeeStats = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/employees/summary`, {
+const res = await axios.get(`/api/employees/summary`, {
   headers: headers
   });
 if(!res.data.error)
@@ -20,7 +20,7 @@ else
 
 export const fetchEmployeeLeaves = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/employees/leaves`, {
+const res = await axios.get(`/api/employees/leaves`, {
   headers: headers
   });
 if(!res.data.error)
@@ -31,7 +31,7 @@ else
 
 export const fetchEmployeeBirthday = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/employees/birthdays`, {
+const res = await axios.get(`/api/employees/birthdays`, {
   headers: headers
   });
 if(!res.data.error)
@@ -46,7 +46,7 @@ else
 
 export const fetchEmployeeRequests = async () => {
 // await delay(2000); // Simulate network delay
-const res = await axios.get(`${baseUrl}/employees/requests`, {
+const res = await axios.get(`/api/employees/requests`, {
   headers: headers
   });
 if(!res.data.error)
