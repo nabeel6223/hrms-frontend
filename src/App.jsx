@@ -46,7 +46,14 @@ function App() {
       ) : (
         <Fragment>
           <Routes>
-            {/* <Route path="/" /> */}
+            <Route
+              path="/"
+              element={
+                <DashboardLayout>
+                  <Employee />
+                </DashboardLayout>
+              }
+            />
             <Route path="/login" element={<Login />} />
             <Route
               path="/"
